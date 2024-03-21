@@ -1,0 +1,150 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+
+  flex-direction: column;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate--infinite {
+  animation-iteration-count: infinite;
+}
+
+.animate--delay-1s {
+  animation-delay: 1s;
+}
+
+.animate--fast {
+  animation-duration: 0.6s;
+}
+
+.animate--slow {
+  animation-duration: 3s;
+}
+
+@keyframes slideInLeft {
+  /* Від 0%, початок. */
+  from {
+    transform: translateX(-300px);
+  }
+
+  /* До 100%, кінець. */
+  to {
+    /* Вихідне положення */
+    transform: translateX(0);
+  }
+}
+
+/* .heading-1 { 
+  Keyframe, який ми маємо дати 
+  animation-name: slideInLeft;
+
+   Час, який потрібен анімації для завершення 1 кола. Від 0% до 100%. 
+  За замовчуванням 0 секунд. 
+  animation-duration: 1s;
+
+   Визначає криву прискорення. Те саме, що й з кривою в transition. 
+  animation-timing-function: ease-in;
+
+   Затримка перед стартом анімації. 0s за замовчуванням, миттєво, як завантажиться сторінка. 
+  animation-delay: 1s;
+
+   Кількість кругів анімації. За умовчуванням 1. Infinite - нескінченнність.
+  animation-iteration-count: 1;
+
+   Означає, чи анімація працюватиме у нормальному чи зворотньому порядку. За замовчуванням - normal. reverse - обертає анімацію. 
+  animation-direction: normal;
+
+   Як застосовуватимуться стилі з нашого keyframe до та після виконання.
+  animation-fill-mode: both;
+   Якщо  forwards, то закінчуємо на останньому правилі keyframe і наступний рядок, а в цьому випадку transform проігнорується і виконається ще перед анімацією.
+  backwards - нічого не зміниться.
+  both - виконаються обидва keyframes, почавши від початку і до кінця. Ніколи не спрацює transform
+  
+  transform: translateX(-150px);
+
+
+   animation, який вкладає в себе всі 7 правил. 
+  Він тут має всі 7 значень, проте можна видалити ті, що йдуть за замовчуванням.
+   animation: slideInLeft 1s ease-in 1s 1 normal both; 
+
+   animation: slideInLeft 1s ease-in;
+} */
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slideInRight {
+  /* Від 0%, початок. */
+  from {
+    transform: translateX(300px);
+  }
+
+  /* До 100%, кінець. */
+  to {
+    /* Вихідне положення */
+    transform: translateX(0);
+  }
+}
+.slideInRight {
+  animation-name: slideInRight;
+  animation-timing-function: ease-in;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation-name: rotate;
+  animation-timing-function: linear;
+
+  /* Відповідає вісь, навколо якої буде обертання center - за замовчуванням. */
+  transform-origin: top left;
+}
+
+@keyframes bounce {
+  0%,
+  50%,
+  60%,
+  100% {
+    transform: translateY(0);
+  }
+  /* Цей запис дорівнює:  50% {
+    transform: translateY(0); 100% {
+    transform: translateY(0);
+  }
+  }*/
+  40% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+}

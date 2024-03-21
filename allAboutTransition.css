@@ -1,0 +1,52 @@
+body {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.btn {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  color: #f715ff;
+  background-color: pink;
+  border: 10px solid #f715ff;
+  border-radius: 5px;
+
+  /*  Наступне стосується   */
+
+  /* transition-property: transform; Властивість, до якої має використовуватися правило transition. 
+  transition-duration: 1s;  Тривалість переходу. 
+  transition-timing-function: ;  Крива прискорення, має багато значень за умовчуванням. ease - default. 
+  transition-delay: ; Затримка перед тим, як перехід почне відбуватися. */
+
+  /* transition: transform 0.3s ease 0s; - всі 4 правила. Можна скоротити, якщо є значення за замовчуванням.
+  Скорочене: transition: transform 0.3s */
+
+  /* Якщо є декілька елементів. Розділяємо кожну властивість комою.
+
+  transition: transform 0.3s, background-color 0.3s, color 0.3s;
+
+  */
+
+  /* Якщо потрібно задати перехід всім властивостям, то є ключове слово all: 
+  transition: all 0.3s*/
+
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-10px);
+  background-color: black;
+  color: white;
+}
